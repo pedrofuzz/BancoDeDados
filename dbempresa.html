@@ -1,0 +1,61 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Tempo de geração: 07/06/2017 às 15:18
+-- Versão do servidor: 10.1.19-MariaDB
+-- Versão do PHP: 5.6.24
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `dbempresa`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `Empregado`
+--
+
+CREATE TABLE `Empregado` (
+  `primeiro_nome` varchar(30) NOT NULL,
+  `segundo_nome` varchar(30) DEFAULT NULL,
+  `terceiro_nome` varchar(30) DEFAULT NULL,
+  `cpf` varchar(12) NOT NULL,
+  `sexo` varchar(1) DEFAULT NULL,
+  `endereco` varchar(50) DEFAULT NULL,
+  `idade` smallint(6) DEFAULT NULL,
+  `data_nasc` date DEFAULT NULL,
+  `salario` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Fazendo dump de dados para tabela `Empregado`
+--
+
+INSERT INTO `Empregado` (`primeiro_nome`, `segundo_nome`, `terceiro_nome`, `cpf`, `sexo`, `endereco`, `idade`, `data_nasc`, `salario`) VALUES
+('Guilherme', 'FIgueiredo', 'Terenciani', '038294561-59', 'M', 'Rua Hilda 203 IFMS', 22, '1994-12-29', 850.54),
+('GUILHERME', 'TERENCIANI', 'TERENCIANI', '235235235-35', 'm', 'Rua Paulo Freire NÂ° 360, Apt 103', 12, '1994-12-29', 850);
+
+--
+-- Índices de tabelas apagadas
+--
+
+--
+-- Índices de tabela `Empregado`
+--
+ALTER TABLE `Empregado`
+  ADD PRIMARY KEY (`cpf`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
